@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Quiz Website</title>
+        <link rel="stylesheet" href="style.css" />
+        <link rel="manifest" href="manifest.json" />
+    </head>
+
+    <body>
+        <div id="start-screen">
+            <h1>Welcome to Quiz Game!</h1>
+            <input type="text" id="username" placeholder="Please enter your name here" autocomplete="name" />
+
+            <p><b id="Ins">------------Instructions!------------</b></p>
+            <ul>
+                <li class="list"><b> Select a difficulty level.</b></li>
+                <li class="list"><b> You have limited time for each question</b></li>
+                <li class="list"><b> Score at least 3 to unlock next level</b></li>
+                <li class="list"><b> No repeating questions</b></li>
+            </ul>
+
+            <button id="start-btn">Start Quiz</button>
+            <button id="leaderboard-btn" class="Leaderboard">View Leaderboard</button>
+        </div>
+
+        <div id="leaderboard-screen" style="display: none">
+            <h2 class="level-description"> Welcome to the Leaderboard!</h2>
+            <div id="leaderboard-content"></div>
+            <button id="back-to-start">Back</button>
+        </div>
+
+        <div id="difficulty-box" style="display: none">
+            <h2 class="level-title">Choose Difficulty</h2>
+            <button class="level" id="easy-btn" data-level="easy">Easy</button>
+            <button class="level" id="medium-btn" data-level="medium">Medium 🔒</button>
+            <button class="level" id="hard-btn" data-level="hard">Hard 🔒</button>
+        </div>
+
+        <img src="download3.jpg" alt="Quiz Image" id="image" />
+
+        <div class="Quiz">
+            <h1>Let's Play a Quiz!</h1>
+
+            <div class="lifelines">
+                <button id="fifty">50-50</button>
+                <button id="hint">Hint</button>
+                <button id="skip">Skip</button>
+            </div>
+
+            <div class="app">
+                <p id="timer">Time: 0</p>
+                <div class="progress-container">
+                    <div id="progress-bar"></div>
+                </div>
+
+                <h2 id="question">Question goes here</h2>
+
+                <div id="answer-buttons" class="options"></div>
+            </div>
+
+            <div class="button-row">
+                <button id="back-btn">Back</button>
+                <button id="next-btn">Next Question</button>
+            </div>
+        </div>
+
+        <script src="java.js"></script>
+    </body>
+</html>
